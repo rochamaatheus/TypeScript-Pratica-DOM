@@ -113,8 +113,19 @@ export default class Slide {
     prevButton.addEventListener('pointerup', () => this.prev());
   }
 
+  // Feedback para o usuário
+  private addThumbItems() {
+    const thumbContainer = document.createElement('div');
+    thumbContainer.id = 'slide-thumb';
+    for (let i = 0; i < this.slides.length; i++) {
+      thumbContainer.innerHTML += `<span><span class="thumb-item"></span></span>`;
+    }
+    this.controls.appendChild(thumbContainer);
+  }
+
   private init() {
     this.addControls();
+    this.addThumbItems();
     this.show(this.index);
   }
 }
