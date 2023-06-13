@@ -40,6 +40,12 @@ O TypeScript Prática DOM é um projeto que utiliza TypeScript para criar um sli
    ```bash
    npm install
    ```
+   
+4. Execute o projeto:
+
+   ```bash
+   npm run dev
+   ```
 ## Utilização
 - Em caso de uso do projeto em seu próprio código
 
@@ -67,12 +73,6 @@ if (container && elements && controls && elements.children.length) {
   );
 }
 ```
-
-- Por fim, execute o projeto com:
-
-   ```bash
-   npm run dev
-   ```
 ---
 
 👨‍💻 Criado por [rochamaatheus](https://github.com/rochamaatheus).
