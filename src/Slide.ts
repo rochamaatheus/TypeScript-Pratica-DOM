@@ -119,7 +119,9 @@ export default class Slide {
 
   private addControls() {
     const prevButton = document.createElement('button');
+    prevButton.innerText = 'Slide Anterior';
     const nextButton = document.createElement('button');
+    nextButton.innerText = 'Próximo Slide';
     this.controls.appendChild(prevButton);
     this.controls.appendChild(nextButton);
     // Funções
