@@ -35,9 +35,15 @@ export default class Slide {
     this.slide.classList.add('active');
   }
 
-  prev() {}
+  prev() {
+    const prev = this.index > 0 ? this.index - 1 : this.slides.length - 1;
+    this.show(prev);
+  }
 
-  next() {}
+  next() {
+    const next = this.index + 1 < this.slides.length ? this.index + 1 : 0;
+    this.show(next);
+  }
 
   private addControls() {
     const prevButton = document.createElement('button');
