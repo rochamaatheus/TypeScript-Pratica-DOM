@@ -52,7 +52,7 @@ export default class Slide {
     this.index = index;
     this.slide = this.slides[this.index];
     localStorage.setItem('activeSlide', String(this.index));
-    // Manipulação
+    // Desenvolvimento
     if (this.thumbItems) {
       this.currentThumb = this.thumbItems[this.index];
       this.thumbItems.forEach((el) => el.classList.remove('active'));
@@ -80,6 +80,8 @@ export default class Slide {
   auto(time: number) {
     this.timeout?.clear();
     this.timeout = new Timeout(() => this.next(), time);
+    if (this.currentThumb)
+      this.currentThumb.style.animationDuration = `${time}ms`;
   }
 
   prev() {

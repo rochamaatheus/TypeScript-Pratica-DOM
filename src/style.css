@@ -65,7 +65,7 @@ h1 {
   isolation: isolate; /* RESPEITAR AS BORDAS */
 }
 
-#slide-thumb .thumb-item {
+#slide-thumb .thumb-item.active {
   display: block;
   height: inherit;
   transform: translateX(-100%);
