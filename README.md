@@ -33,7 +33,7 @@ O TypeScript Prática DOM é um projeto que utiliza TypeScript para criar um sli
 2. Navegue até o diretório do projeto:
 
    ```bash
-   cd TypeScript-Pratica-Dados
+   cd TypeScript-Pratica-DOM
    
 3. Instale as dependências:
 
