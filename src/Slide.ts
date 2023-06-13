@@ -41,12 +41,22 @@ export default class Slide {
     this.slide = this.slides[this.index];
     this.slides.forEach((el) => this.hide(el));
     this.slide.classList.add('active');
-    this.auto(this.time);
+    if (this.slide instanceof HTMLVideoElement) {
+      this.autoVideo(this.slide);
+    } else {
+      this.auto(this.time);
+    }
+  }
+
+  autoVideo(video: HTMLVideoElement) {
+    video.muted = true;
+    video.play();
+    this.auto(video.duration * 1000);
   }
 
   auto(time: number) {
     this.timeout?.clear();
-    new Timeout(() => this.next(), time);
+    this.timeout = new Timeout(() => this.next(), time);
   }
 
   prev() {
@@ -63,6 +73,7 @@ export default class Slide {
 
   pause() {
     this.pausedTimeout = new Timeout(() => {
+      this.paused = true;
       this.timeout?.pause();
     }, 300);
   }
