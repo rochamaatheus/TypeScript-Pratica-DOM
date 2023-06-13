@@ -101,6 +101,7 @@ export default class Slide {
       this.paused = true;
       this.timeout?.pause();
       if (this.slide instanceof HTMLVideoElement) this.slide.pause();
+      this.currentThumb?.classList.add('paused');
     }, 300);
   }
 
@@ -110,6 +111,7 @@ export default class Slide {
       this.paused = false;
       this.timeout?.continue();
       if (this.slide instanceof HTMLVideoElement) this.slide.play();
+      this.currentThumb?.classList.remove('paused');
     }
   }
 
