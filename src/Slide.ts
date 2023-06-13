@@ -10,6 +10,8 @@ export default class Slide {
   timeout: Timeout | null;
   pausedTimeout: Timeout | null;
   paused: Boolean;
+  thumbItems: HTMLElement[] | null;
+  currentThumb: HTMLElement | null;
   constructor(
     container: Element,
     slides: Element[],
@@ -31,6 +33,10 @@ export default class Slide {
       : 0;
     this.slide = this.slides[this.index];
 
+    // Feedback
+    this.thumbItems = null;
+    this.currentThumb = null;
+
     this.init();
   }
 
@@ -47,6 +53,11 @@ export default class Slide {
     this.slide = this.slides[this.index];
     localStorage.setItem('activeSlide', String(this.index));
     // Manipulação
+    if (this.thumbItems) {
+      this.currentThumb = this.thumbItems[this.index];
+      this.thumbItems.forEach((el) => el.classList.remove('active'));
+      this.currentThumb.classList.add('active');
+    }
     this.slides.forEach((el) => this.hide(el));
     this.slide.classList.add('active');
     if (this.slide instanceof HTMLVideoElement) {
@@ -121,6 +132,7 @@ export default class Slide {
       thumbContainer.innerHTML += `<span><span class="thumb-item"></span></span>`;
     }
     this.controls.appendChild(thumbContainer);
+    this.thumbItems = Array.from(document.querySelectorAll('.thumb-item'));
   }
 
   private init() {
