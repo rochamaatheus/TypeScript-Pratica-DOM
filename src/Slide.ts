@@ -97,6 +97,7 @@ export default class Slide {
   }
 
   pause() {
+    this.disableContext();
     document.body.classList.add('paused');
     this.pausedTimeout = new Timeout(() => {
       this.paused = true;
@@ -108,6 +109,7 @@ export default class Slide {
 
   continue() {
     document.body.classList.remove('paused');
+    this.enableContext();
     this.pausedTimeout?.clear();
     if (this.paused) {
       this.paused = false;
@@ -115,6 +117,20 @@ export default class Slide {
       if (this.slide instanceof HTMLVideoElement) this.slide.play();
       this.currentThumb?.classList.remove('paused');
     }
+  }
+
+  disableContext() {
+    document.body.addEventListener('contextmenu', this.handleContextMenu, {
+      passive: false,
+    });
+  }
+
+  enableContext() {
+    document.body.removeEventListener('contextmenu', this.handleContextMenu);
+  }
+
+  private handleContextMenu(event: Event) {
+    event.preventDefault();
   }
 
   private addControls() {
