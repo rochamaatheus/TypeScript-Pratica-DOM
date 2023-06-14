@@ -4,11 +4,11 @@
 
 Um projeto em TypeScript que cria um slide semelhante aos stories do Instagram, permitindo pausar, voltar e avançar os slides.
 
-![Logo](logo.png)
-
 [Acesse o site](https://rochamaatheus.github.io/TypeScript-Pratica-DOM/dist/index.html)
 
 - Nota: Este link redireciona para o projeto depois da build.
+
+![Logo](logo.png)
 
 🚀 Linguagem utilizada: TypeScript
 
