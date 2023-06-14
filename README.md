@@ -6,6 +6,10 @@ Um projeto em TypeScript que cria um slide semelhante aos stories do Instagram, 
 
 ![Logo](logo.png)
 
+[Acesse o site](https://rochamaatheus.github.io/TypeScript-Pratica-DOM/dist/index.html)
+
+- Nota: Este link redireciona para o projeto depois da build.
+
 🚀 Linguagem utilizada: TypeScript
 
 ---
