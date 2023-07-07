@@ -1,6 +1,6 @@
 # TypeScript Prática DOM
 
-![Site Demo](site_demo.png)
+![Capa_Site](https://i.imgur.com/zzkr89Y.png)
 
 Um projeto em TypeScript que cria um slide semelhante aos stories do Instagram, permitindo pausar, voltar e avançar os slides.
 
@@ -8,7 +8,7 @@ Um projeto em TypeScript que cria um slide semelhante aos stories do Instagram, 
 
 - Nota: Este link redireciona para o projeto depois da build.
 
-![Logo](logo.png)
+<img align="center" alt="Rocha-TypeScript" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg">
 
 🚀 Linguagem utilizada: TypeScript
 
