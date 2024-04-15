@@ -78,5 +78,10 @@ if (container && elements && controls && elements.children.length) {
 }
 ```
 ---
+## Contato
+
+Se você tiver alguma dúvida ou precisar de assistência adicional, fique à vontade para entrar em contato através do LinkedIn, Instagram ou por e-mail. As informações de contato estão disponíveis na minha página principal do GitHub.
+
+---
 
 👨‍💻 Criado por [rochamaatheus](https://github.com/rochamaatheus).
